@@ -1,0 +1,101 @@
+----- Terminado en (9/9) ------
+
+var valores=["Piedra","Papel","Tijeras"];
+var usuarioEscoge;
+var computadorEscoge;
+
+var preguntarUsuario = function () {
+    usuarioEscoge = prompt("¿Piedra, papel o tijeras?");
+        
+    if (verificarEscoge(usuarioEscoge) == false) {
+        console.log("Error en la elección");
+        preguntarUsuario();    
+    } else {
+        
+        var resultado = comparar(usuarioEscoge,computadorEscoge);
+
+        console.log("Tu: "+usuarioEscoge);
+        console.log("CPU: "+computadorEscoge);    
+        console.log(resultado);    
+        
+        if (resultado=="¡Es un empate!") {
+            jugar();        
+        }
+        
+    }
+    
+}
+
+var preguntarComputador = function () {
+    
+    computadorEscoge = Math.random();
+    
+    if (computadorEscoge < 0.34){
+    	computadorEscoge = valores[0];
+    }else if(computadorEscoge <= 0.67){
+    	computadorEscoge = valores[1];
+    }else{
+    	computadorEscoge = valores[2];
+    }
+    
+}
+
+var verificarEscoge = function (eleccion) {
+    
+    var valido = false,
+        i = 0;
+    
+    for ( i; i < valores.length; i++){
+        if (valores[i].toLowerCase() == eleccion.toLowerCase()) {
+        
+            valido = true;
+            
+        }
+    
+    }
+    
+    return valido;
+}
+var comparar = function(eleccion1,eleccion2){
+    if (eleccion1.toLowerCase() == eleccion2.toLowerCase()) {
+        return "¡Es un empate!";        
+    }
+    
+    if (eleccion1.toLowerCase() == valores[0].toLowerCase()) {
+        
+        if (eleccion2.toLowerCase() == valores[2].toLowerCase()) {
+            return valores[0] + " gana";    
+        } else {
+            return valores[1] + " gana";    
+        }
+        
+    }
+    
+    if (eleccion1.toLowerCase() == valores[1].toLowerCase()) {
+        
+        if (eleccion2.toLowerCase() == valores[0].toLowerCase()) {
+            return valores[1] + " gana";     
+        } else {
+            return valores[2] + " gana";    
+        }
+        
+    }        
+    
+    if (eleccion1.toLowerCase() == valores[2].toLowerCase()) {
+        
+        if (eleccion2.toLowerCase() == valores[0].toLowerCase()) {
+            return valores[0] + " gana";    
+        } else {
+            return valores[2] + " gana";    
+        }
+        
+    }    
+    
+}
+
+var jugar = function() {
+    preguntarComputador(); // no vale hacer console log...
+    preguntarUsuario();
+}
+
+jugar();

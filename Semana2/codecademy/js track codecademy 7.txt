@@ -1,0 +1,23 @@
+var atacar = true,
+    tuAciertas = true,//Math.round(Math.random()),
+    dannoEsteRound = Math.floor(Math.random()*5)+1,
+    dannoTotal = 0;
+    
+while(atacar) {
+
+    if (tuAciertas==1) {    
+        console.log("Le has dado duro al Dragón. Enhorabuena. (-"+(dannoEsteRound)+")");
+        dannoTotal+= dannoEsteRound;
+        
+        if(dannoTotal>=4){
+            console.log("Has matado al Dragón.");
+            atacar = false;
+        } else {
+            tuAciertas = Math.round(Math.random()*5)+1;
+        }
+    } else {
+        console.log("Fail. El Dragón te llama n00b y se ríe en tu cara.");
+        atacar = false;
+    }
+    
+}

@@ -1,0 +1,133 @@
+--- 1 --------------
+
+var moneda = Math.floor(Math.random() * 2);
+
+while(moneda){
+	console.log("¡Cara! Lanzando de nuevo...");
+	var moneda = Math.floor(Math.random() * 2);
+}
+console.log("¡Sello! Lanzamiento concluido.");
+
+--- 2 --------------
+
+entender = true;
+
+while(entender==true){
+	console.log("¡Estoy aprendiendo sobre los bucles 'while'!");
+	entender = false;
+}
+
+--- 3 --------------
+
+entender = true;
+
+while(entender){
+	console.log("¡Estoy aprendiendo sobre los bucles 'while'!");
+	//¡Cambia aquí el valor de 'entender'!
+	entender = false
+}
+
+--- 4 --------------
+
+var bool = true;
+
+while(bool){
+    console.log("¡Menos es más!");
+    bool = false;
+}
+
+
+--- 5 --------------
+
+
+//¡Recuerda hacer que tu condición sea igual a 'true' fuera del bucle!
+
+var bucle = function(){
+    var counter = 0;
+	while(counter++<3){
+		console.log("¡Estoy en un bucle!");
+	}
+};
+
+bucle();
+
+--- 6 --------------
+
+//¡Recuerda hacer que tu condición sea igual a 'true' fuera del bucle!
+
+var soloBucle = function(){
+  var bool = true;
+  
+  while(bool) {
+    console.log("¡Un bucle!"); 
+    bool = false;
+  };  
+};
+
+soloBucle();
+
+--- 7 --------------
+
+N/A
+
+--- 8 --------------
+
+var drivers = ["Sebastian","Fernando","Jenson","Kimi"],
+    p=0;
+
+for (var i=0,len = drivers.length;i<len;i++){
+    console.log("#"+i+": "+drivers[i]);    
+}
+
+while(p<drivers.length) {
+    console.log("#"+p+": "+drivers[p]);    
+    p++;
+}
+
+--- 9 --------------
+
+condicionBucle = false;
+
+do {
+	console.log("Voy a dejar de hacer bucles porque mi condición es " + String(condicionBucle) + "!");	
+} while (condicionBucle === true);
+
+--- 10 --------------
+
+var alHelicoptero = function(){
+    
+  var vuela = false;
+  
+  do {
+    console.log("Tengo un helicoptero que volará");    
+  }
+  while(vuela===true);
+  
+};
+
+--- 11 --------------
+
+var escuderias = ["McLaren","Ferrari","RedBull","Sauber","Williams","Force India","Toro Rosso"];
+
+for (var i = 0, len = escuderias.length; i < len; i++) {
+    console.log("#"+i+": "+escuderias[i]);
+}
+
+var p=0;
+
+while(p<escuderias.length) {
+    
+    console.log("#"+p+": "+escuderias[p]);
+    p++;
+}
+
+var k=0;
+
+do {
+    console.log("#"+k+": "+escuderias[k]);
+    k++;
+}
+while(k<escuderias.length)
+
+
+#eof
