@@ -1,0 +1,36 @@
+
+
+function HigherLearning() {
+  
+  this.educationLevel = "University";
+  
+}
+
+
+var school = new HigherLearning();
+school.schoolName = "MIT";
+school.schoolAccredited = true;
+school.schoolLocation = "Massa";
+
+for (var eachItem in school) {
+  
+  console.log(eachItem);
+  
+}
+
+console.log(delete school.educationLevel);
+console.log(school.educationLevel);
+
+var newSchool = new HigherLearning();
+
+HigherLearning.prototype.educationLevel2 = "University2";
+
+console.log("school.hasOwnProperty('educationLevel2'): " + school.hasOwnProperty("educationLevel2")); // no tiene la propiedad en su prototipo ya que fué instanciado antes de que educationLevel2 fuera definido
+
+console.log("school.educationLevel2: " + school.educationLevel2); //porque existe como propiedad para esta instancia
+
+
+delete school.educationLevel2;
+
+console.log("school.educationLevel2 after delete: "+ school.educationLevel2);
+
