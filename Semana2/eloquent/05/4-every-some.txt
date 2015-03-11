@@ -1,0 +1,22 @@
+function every(array,test) {
+  
+    var rs = false;
+  
+    array.forEach(function(current,index,vector) {
+        if (test(current)) rs = true
+        else rs = false;
+    })
+    
+    return rs;
+}
+
+function some(array,test) {
+
+    var rs = false;
+  
+    array.forEach(function(current,index,array) {
+      	if (rs==false && test(current)) rs = true
+    })
+    
+    return rs;
+}

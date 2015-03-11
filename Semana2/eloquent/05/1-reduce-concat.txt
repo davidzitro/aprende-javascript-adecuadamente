@@ -1,0 +1,12 @@
+var arrays = [[1, 2, 3], [4, 5], [6]];
+var merged = [];
+
+arrays.reduce(function(valPrev,valCur,index,array) {
+	//console.log(valPrev);
+  	merged = merged.concat.apply(merged, valCur);
+}, arrays[0]);
+
+console.log(merged);
+
+// Your code here.
+// ? [1, 2, 3, 4, 5, 6]
