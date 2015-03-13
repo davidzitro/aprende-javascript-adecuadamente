@@ -1,0 +1,28 @@
+var Vector = function Vector (vx,vy) {
+  
+    Object.create(null)
+    
+	this.x = vx;
+  	this.y = vy;
+}
+
+Vector.prototype = null;
+Vector.prototype = {};
+
+Vector.prototype.plus = function(vector) {
+	this.x = this.x+vector.x;
+  	this.y = this.y+vector.y;
+      
+  	return this;
+}
+
+Vector.prototype.minus = function(vector) {
+	this.x = this.x-vector.x;
+	this.y = this.y-vector.y;  
+    	
+  return this;
+}
+
+Vector.prototype.__defineGetter__("length", function () {
+    return Math.sqrt( Math.pow( this.x, 2 ) + Math.pow( this.y, 2 ) );
+});
