@@ -1,0 +1,10 @@
+function withBoxUnlocked(body) {
+  box.unlock();
+  try {
+    body();
+  }
+  catch (e) {} 
+  finally {
+    box.lock();
+  } 
+}

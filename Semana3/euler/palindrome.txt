@@ -1,0 +1,41 @@
+// noprotect
+
+var largestPalindrome = function largestPalindrome(digits) {
+  
+  var from = Math.pow(10,digits)/10,
+      to = Math.pow(10,(digits+1))/10-1,
+      rs = 0;
+     
+  for (var i=0, limitX=to-from; i<=limitX; i++) {
+    
+      var product;
+            
+      for (var j=to-from, limitY=0;j>=limitY;j--) {
+        
+        product = (from+i)*(to-j);
+                
+        if (checkPalindrome(product)===true)
+        {
+          
+          if (product>rs) rs = product;
+          
+        }
+        
+      }
+  
+  }
+  
+  return rs;
+  
+};
+
+var checkPalindrome = function checkPalindrome(number) {
+  
+  var str = number.toString();
+  var reversed = str.split('').reverse().join("");
+    
+  return str == reversed;
+  
+};
+
+console.log(largestPalindrome(3));

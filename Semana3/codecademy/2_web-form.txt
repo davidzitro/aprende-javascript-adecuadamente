@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<form>
+	    <input name="piloto" type="text" value="Max Verstappen"></input>
+	    <input name="equipo" type="text" value="Toro Rosso"></input>	 
+	    <textarea></textarea>
+	    <input type="radio">Yes</input>
+	    <input type="radio">No</input>
+        <p id="title">Withdraw reason</p>
+        <p id="comment">(Check all that apply)</p>
+        <input type='checkbox' checked>Engine</input>
+        <input type='checkbox'>Tyres</input>
+        <input type='checkbox'>Because yes</input>
+        <input type='submit'></input>
+	</form>
+	</body>
+</html>
+
+#title { font-weight:bold; }
+#comment { font-size:10px; }

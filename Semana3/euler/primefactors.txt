@@ -1,0 +1,18 @@
+function findprimes(number, primes){
+  var root = Math.sqrt(number),  
+      rs = primes || [],
+      c = 2; 
+  
+  if(number % c){
+   c = 3;
+   while((number % c) && ((c = c + 2) < root)){}
+  }
+
+  c = (c <= root) ? c : number;
+  rs.push(c);
+
+  return (c === number) ? rs : findprimes(number/c, rs) ;
+  
+}
+
+console.log(findprimers(13195));

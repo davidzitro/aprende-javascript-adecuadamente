@@ -1,0 +1,12 @@
+var my_canvas = document.getElementById("canvas");
+var context = my_canvas.getContext("2d");
+
+context.beginPath();
+context.arc(75,75,40,0,Math.PI*2);
+context.stroke();
+
+context.fillStyle = "#fabada";
+context.fillRect(130, 10, 50, 180);
+
+context.font = "30px Garamond";
+context.fillText("Fail!",15,175);

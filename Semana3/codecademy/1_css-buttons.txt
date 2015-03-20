@@ -1,0 +1,43 @@
+2/8 --------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Buttons Galore!</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+	</head>
+	<body>
+	<div></div>
+	</body>
+</html>
+
+3/8 -------------
+
+div { height:120; width:90 }
+
+4/8 -------------
+
+div { height:120; width:90; border:4px solid black }
+
+5/8 -------------
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Buttons Galore!</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+	</head>
+	<body>
+	<div>almáciga</div>
+	</body>
+</html>
+
+
+6/8 -------------
+
+div { height:120; width:90; border:4px solid black; background-color:#fabada }
+
+7/8 -------------
+
+div { height:120; width:90; border:4px solid black; background-color:#fabada; box-shadow: 5px 5px 5px #888; }

@@ -1,0 +1,10 @@
+// Write your code below!
+var userAge = parseInt(prompt("How old are thu"));
+
+if (isNaN(userAge) === true) {
+    console.log("marrullero mete tu edad");    
+} else if (userAge>18 && userAge<100) {
+    console.log("enhorabuena joven");    
+} else {
+    console.log("no deberías estar aquí");
+}
